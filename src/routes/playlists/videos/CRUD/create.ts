@@ -29,7 +29,7 @@ export default Helpers.route.createRoute({
         if(playlistInstance.videos.map(v => v.videoId).includes(videoInstance.videoId)) throw Constants.Errors.VideoAlreadyInPlaylist;
         // Ajout de la vidéo à la playlist
         await sequelize.transaction(async (transaction) => {
-            await playlistInstance.addVideo(videoInstance, { through: { rank: playlistInstance.videos.length + 1 }, transaction });
+            await playlistInstance.addVideo(videoInstance, { through: { rank: playlistInstance.videos.length + 1 } as any, transaction });
             await playlistInstance.reload({ include: Playlist.includes, transaction });
             await Helpers.ElasticSearch.createOrUpdatePlaylist(playlistInstance);
         });
