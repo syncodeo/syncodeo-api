@@ -1,12 +1,13 @@
 name: Build Docker image and deploy to GitHub repository
 
 on:
-  push:
-    branches: ['master', 'github-actions']
+  release:
+    types:
+      - published
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.sha }}
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push-image:
