@@ -1,0 +1,44 @@
+{
+	"Constants": {
+		"prefix": "_c",
+		"body": [
+			"import * as Constants from '$1/';"
+		],
+		"description": "Import Constants"
+	},
+	"Helpers": {
+		"prefix": "_h",
+		"body": [
+			"import * as Helpers from '$1/';"
+		],
+		"description": "Import Helpers"
+	},
+	"Controllers": {
+		"prefix": "_c",
+		"body": [
+			"import * as Controllers from '$1/';"
+		],
+		"description": "Import Controllers"
+	},
+	"Cache": {
+		"prefix": "_c",
+		"body": [
+			"import * as Cache from '$1/';"
+		],
+		"description": "Import Cache"
+	},
+	"Models": {
+		"prefix": "_m",
+		"body": [
+			"import { $2 } from '$1/';"
+		],
+		"description": "Import Models"
+	},
+	"Errors": {
+		"prefix": "_e",
+		"body": [
+			"Constants.Errors"
+		],
+		"description": "Shortcut for Constants Errors"
+	},
+}
