@@ -2,7 +2,7 @@ name: Build Docker image and deploy to GitHub repository
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', 'github-actions']
 
 env:
   REGISTRY: ghcr.io
