@@ -50,7 +50,9 @@ export const server = new Server({
         request: ['error']
     },
     routes: {
-        cors: true,
+        cors: {
+            origin: ['*']
+        },
         auth: false,
         validate: {
             failAction: (request, h, err) => {
